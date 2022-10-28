@@ -32,28 +32,28 @@ export async function getMessages(token, id, post) {
   return result;
 }
 
-export async function createMessage(message, id) {
+export async function createMessage(id, content) {
+  const token = localStorage.getItem("token");
   const createMessageOptions = {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${getTokenFromLocal}`,
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({
-      post: {
-        message,
+      message: {
+        content: "yay"
       },
     }),
   };
   console.log(createMessageOptions)
   const response = await fetch(
-    `${BASE_URL}/api/${COHORT}/posts/${id}/message`,
-    /* changed to message from messages, which removed error code 401 */
+    `${BASE_URL}/api/${COHORT}/posts/${id}/messages`,
     createMessageOptions
   );
   const result = await response.json();
-  console.log(result);
-  return result/*.data.token*/;//removed to clear null properties message.
+  console.log(result, 'testing create message');
+  return result.data/*.data.token*/;//removed to clear null properties message.
 }
 
 export async function registerUser(username, password) {

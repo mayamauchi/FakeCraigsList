@@ -8,7 +8,8 @@ import {
   SinglePost,
   PostDetails,
   Messages,
-  CreateMessages
+  CreateMessages,
+  Searchbar
 } from "./";
 import {
   createBrowserRouter,
@@ -35,6 +36,9 @@ const Main = () => {
     })
   }
 
+  
+
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<NavBar />}>
@@ -51,7 +55,7 @@ const Main = () => {
   return (
     <div id="main">
       <RouterProvider router={router} />
-      
+
     </div>
   );
 };
