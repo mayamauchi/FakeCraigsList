@@ -8,4 +8,8 @@ export {default as SinglePost} from './SinglePost'
 export {default as PostDetails} from './PostDetails'
 export {default as Messages} from './Messages'
 export {default as CreateMessages} from './CreateMessages'
+<<<<<<< HEAD
 export {default as Searchbar} from './Searchbar'
+=======
+export {default as Profile} from './Profile'
+>>>>>>> 50aed93c1dec69975bc733d9022a568d4eab884d

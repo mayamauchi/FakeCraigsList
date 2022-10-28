@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useEffect, useState} from "react";
 import {Outlet, NavLink} from "react-router-dom"
 import {Searchbar, Posts, Si} from "./";
@@ -48,9 +49,33 @@ const NavBar = () => {
         setPostData={setPostData} />
       )} */}
       
+=======
+import React from "react";
+import { Outlet, NavLink } from "react-router-dom";
+
+const NavBar = () => {
+  return (
+    <>
+      <div id="navbar">
+        <h2 id="navTitle"> Dank Craigslist</h2>
+        <div className="nav">
+          <NavLink className="navButtons" to="/posts">
+            Posts
+          </NavLink>
+          <NavLink className="navButtons" to="/login">
+            Login
+          </NavLink>
+          <NavLink className="navButtons" to="/register">
+            Register
+          </NavLink>
+          <NavLink className="navButtons" to="/profile">
+            Profile
+          </NavLink>
+        </div>
+>>>>>>> 50aed93c1dec69975bc733d9022a568d4eab884d
       </div>
-    </div>
-      <Outlet/></>
+      <Outlet />
+    </>
   );
 };
 
